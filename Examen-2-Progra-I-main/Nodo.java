@@ -9,6 +9,9 @@ public class Nodo
 {
 
     private String nombre;
+    private int carnet;
+    private int Notas;
+    
     private Nodo siguiente;
 
     /**

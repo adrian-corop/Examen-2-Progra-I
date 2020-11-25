@@ -1,6 +1,11 @@
 #BlueJ class context
 comment0.target=Estudiante
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Estudiante\ here.\r\n\ \r\n\ @author\ (Adrian\ Coronado\ -\ C02414)\ \r\n\ @version\ (25/11/2020)\r\n
 comment1.params=
-comment1.target=int\ calcularPromedios()
-numComments=2
+comment1.target=java.lang.String\ solicitarNombre()
+comment2.params=
+comment2.target=int\ solicitarCarnet()
+comment3.params=
+comment3.target=void\ solicitarNotas()
+comment4.params=
+comment4.target=int\ calcularPromedios()
+numComments=5
