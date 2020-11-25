@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=MetodosLista
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MetodosLista\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=MetodosLista()
+comment10.params=nombre\ posicion
+comment10.target=void\ insertarEnPosicion(java.lang.String,\ int)
+comment2.params=
+comment2.target=boolean\ estaVacia()
+comment3.params=
+comment3.target=int\ getTamano()
+comment4.params=nombre
+comment4.target=void\ agregarAlFinal(java.lang.String)
+comment5.params=nombre
+comment5.target=void\ agregarAlInicio(java.lang.String)
+comment6.params=referencia
+comment6.target=boolean\ buscarElemento(java.lang.String)
+comment7.params=nombre
+comment7.target=int\ obtenerPosicionAlfabetica(java.lang.String)
+comment8.params=referencia
+comment8.target=int\ obtenerPosicion(java.lang.String)
+comment9.params=nombre\ referencia
+comment9.target=void\ insertarDespuesDe(java.lang.String,\ java.lang.String)
+numComments=11
