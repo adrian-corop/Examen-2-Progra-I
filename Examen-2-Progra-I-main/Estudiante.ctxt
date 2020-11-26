@@ -7,5 +7,5 @@ comment2.target=int\ solicitarCarnet()
 comment3.params=
 comment3.target=void\ solicitarNotas()
 comment4.params=
-comment4.target=int\ calcularPromedios()
+comment4.target=int\ calcularpromedio()
 numComments=5

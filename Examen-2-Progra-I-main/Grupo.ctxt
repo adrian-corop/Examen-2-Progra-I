@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Grupo
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Grupo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=nombre
-comment1.target=void\ insertarAlfabeticamente(java.lang.String)
+comment1.params=nombre\ carnet\ promedio
+comment1.target=void\ insertarAlfabeticamente(java.lang.String,\ int,\ int)
 comment2.params=
-comment2.target=void\ insertarPromedios()
+comment2.target=void\ imprimirLista()
+comment2.text=\r\n\ \ \ \ Arbol\ metodosArbol\ \=\ new\ Arbol();\r\n\r\n\ \ \ \ public\ void\ insertarPromedios(int\ promedio){\r\n\r\n\ \ \ \ \ \ \ \ metodosArbol.agregarHijo(promedio);\r\n\r\n\ \ \ \ }\r\n
 numComments=3

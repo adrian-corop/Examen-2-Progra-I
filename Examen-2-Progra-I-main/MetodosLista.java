@@ -24,9 +24,10 @@ public class MetodosLista
         return tamano;
     }
 
-    public void agregarAlFinal(String nombre){
+    public void agregarAlFinal(String nombre, int carnet){
         Nodo nuevoNodo = new Nodo();
         nuevoNodo.setNombre(nombre);
+        nuevoNodo.setCarnet(carnet);
         if(estaVacia()){
             inicio = nuevoNodo;
         }else{
@@ -39,9 +40,11 @@ public class MetodosLista
         tamano++;
     }
 
-    public void agregarAlInicio(String nombre){
+    public void agregarAlInicio(String nombre, int carnet, int promedio){
         Nodo nuevoNodo = new Nodo();
         nuevoNodo.setNombre(nombre);
+        nuevoNodo.setCarnet(carnet);
+        nuevoNodo.setCarnet(promedio);
         if(estaVacia()){
             inicio = nuevoNodo;
         }else{
@@ -70,24 +73,22 @@ public class MetodosLista
             auxiliar = auxiliar.getSiguiente();
             posicion++;
         }
-        
+
         return posicion+1;
     }
 
-    
-
-    
-
-    public void insertarEnPosicion(String nombre, int posicion){
+    public void insertarEnPosicion(String nombre,int carnet,int promedio, int posicion){
         if (posicion >= 0 && posicion <= tamano){
             if(posicion == 0){
-                agregarAlInicio(nombre);
+                agregarAlInicio(nombre, carnet, promedio);
 
             }else if(posicion == tamano){
-                agregarAlFinal(nombre);
+                agregarAlFinal(nombre, carnet);
             }else{
                 Nodo nuevoNodo = new Nodo();
                 nuevoNodo.setNombre(nombre);
+                nuevoNodo.setCarnet(carnet);
+                nuevoNodo.setCarnet(promedio);
                 Nodo aux= inicio;
                 for(int indice = 0; indice < (posicion-1); indice++){
                     aux = aux.getSiguiente();
@@ -96,6 +97,18 @@ public class MetodosLista
                 aux.setSiguiente(nuevoNodo);
                 nuevoNodo.setSiguiente(nodoSiguiente);
                 tamano++;
+            }
+        }
+    }
+
+    public void imprimirLista(){
+        if (!estaVacia()){
+            Nodo aux = inicio;
+            int posicion = 0;
+            while(aux != null){
+                System.out.println("Estudiante: " + aux.getNombre()+"   " + aux.getCarnet() + "    Promedio:    " + aux.getPromedio());
+                posicion++; 
+                aux = aux.getSiguiente();
             }
         }
     }

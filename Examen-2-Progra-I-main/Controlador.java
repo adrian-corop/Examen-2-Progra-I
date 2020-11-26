@@ -31,6 +31,7 @@ public class Controlador
             switch (opcion){
                 case 1:
                 anadirEstudiantes();
+                
                 break;
                 case 2:
 
@@ -56,13 +57,37 @@ public class Controlador
     }
 
     public static void anadirEstudiantes(){  
+        Scanner reader = new Scanner(System.in);
         Grupo grupo = new Grupo();
         Estudiante estudiante = new Estudiante();
-        Arbol arbol = new Arbol();
-        grupo.insertarAlfabeticamente(estudiante.solicitarNombre());
-        estudiante.solicitarCarnet();
-        estudiante.solicitarNotas();        
-        grupo.insertarPromedios();
-        arbol.recorrerEnOrden(arbol.getRaiz());
+        //Arbol arbol = new Arbol();
+        
+        String nombre = estudiante.solicitarNombre();
+        int carnet= estudiante.solicitarCarnet();
+        estudiante.solicitarNotas();         
+        int promedio = estudiante.calcularpromedio();
+        
+        //grupo.insertarPromedios(promedio);
+        //arbol.recorrerEnOrden(arbol.getRaiz());
+        
+        grupo.insertarAlfabeticamente(nombre,carnet, promedio);      
+        grupo.imprimirLista();
+        
+        
+        
+        int bandera;           
+        System.out.println("Desea anadir otro estudiante?   1 = Si  2 = No");
+        bandera = reader.nextInt();        
+        if(bandera == 1){
+            anadirEstudiantes();            
+        }else{
+            if (bandera == 0){                
+                return;
+            }else{
+                System.out.println("Esa opcion no esta disponible");
+                return;
+            }
+        }
     }
+    
 }

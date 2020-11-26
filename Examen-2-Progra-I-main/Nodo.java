@@ -10,7 +10,7 @@ public class Nodo
 
     private String nombre;
     private int carnet;
-    private int Notas;
+    private int promedio;
     
     private Nodo siguiente;
 
@@ -19,6 +19,8 @@ public class Nodo
      */
     public Nodo()
     {
+        carnet = 0;
+        promedio = 0;
         nombre = null;
         siguiente = null;
     }
@@ -26,9 +28,22 @@ public class Nodo
     public String getNombre(){
         return nombre;
     }
-
     public void setNombre(String nombre){
         this.nombre = nombre;
+    }
+    
+    public int getPromedio(){
+        return promedio;
+    }
+    public void setPromedio(int promedio){
+        this.promedio = promedio;
+    }
+    
+    public int getCarnet(){
+        return carnet;
+    }
+    public void setCarnet(int carnet){
+        this.carnet = carnet;
     }
 
     public Nodo getSiguiente(){
@@ -39,7 +54,9 @@ public class Nodo
         this.siguiente = siguiente;
     }
     
-    private int promedio;
+    
+    /**
+    
     Nodo hijoIzquierdo;
     Nodo hijoDerecho;
 
@@ -48,11 +65,6 @@ public class Nodo
         this.promedio = promedio;
         hijoIzquierdo = null;
         hijoDerecho = null;
-    }
-    
-    public int getPromedio()
-    {
-        return promedio;
     }
     
     public Nodo getHijoIzquierdo()
@@ -65,11 +77,6 @@ public class Nodo
         return hijoDerecho;
     }
     
-    public void setPromedio(int promedio)
-    {
-        this.promedio = promedio;
-    }
-    
     public void setHijoIzquierdo(Nodo nuevoNodo)
     {
         hijoIzquierdo = nuevoNodo;
@@ -79,5 +86,6 @@ public class Nodo
     {
         hijoDerecho = nuevoNodo;
     }
+    */
 }
 
