@@ -79,6 +79,7 @@ public class Controlador
         System.out.println("Desea anadir otro estudiante?   1 = Si  2 = No");
         bandera = reader.nextInt();        
         if(bandera == 1){
+            
             anadirEstudiantes();            
         }else{
             if (bandera == 0){                

@@ -24,7 +24,7 @@ public class MetodosLista
         return tamano;
     }
 
-    public void agregarAlFinal(String nombre, int carnet){
+    public void agregarAlFinal(String nombre, int carnet, int promedio){
         Nodo nuevoNodo = new Nodo();
         nuevoNodo.setNombre(nombre);
         nuevoNodo.setCarnet(carnet);
@@ -44,7 +44,7 @@ public class MetodosLista
         Nodo nuevoNodo = new Nodo();
         nuevoNodo.setNombre(nombre);
         nuevoNodo.setCarnet(carnet);
-        nuevoNodo.setCarnet(promedio);
+        nuevoNodo.setPromedio(promedio);
         if(estaVacia()){
             inicio = nuevoNodo;
         }else{
@@ -83,12 +83,12 @@ public class MetodosLista
                 agregarAlInicio(nombre, carnet, promedio);
 
             }else if(posicion == tamano){
-                agregarAlFinal(nombre, carnet);
+                agregarAlFinal(nombre, carnet, promedio);
             }else{
                 Nodo nuevoNodo = new Nodo();
                 nuevoNodo.setNombre(nombre);
                 nuevoNodo.setCarnet(carnet);
-                nuevoNodo.setCarnet(promedio);
+                nuevoNodo.setPromedio(promedio);
                 Nodo aux= inicio;
                 for(int indice = 0; indice < (posicion-1); indice++){
                     aux = aux.getSiguiente();
@@ -104,10 +104,10 @@ public class MetodosLista
     public void imprimirLista(){
         if (!estaVacia()){
             Nodo aux = inicio;
-            int posicion = 0;
+            
             while(aux != null){
-                System.out.println("Estudiante: " + aux.getNombre()+"   " + aux.getCarnet() + "    Promedio:    " + aux.getPromedio());
-                posicion++; 
+                System.out.println("Estudiante: " + aux.getNombre()+"-" + aux.getCarnet() + "    Promedio:" + aux.getPromedio());
+                 
                 aux = aux.getSiguiente();
             }
         }

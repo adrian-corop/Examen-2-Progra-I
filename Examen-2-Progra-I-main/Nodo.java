@@ -32,6 +32,13 @@ public class Nodo
         this.nombre = nombre;
     }
     
+    public int getCarnet(){
+        return carnet;
+    }
+    public void setCarnet(int carnet){
+        this.carnet = carnet;
+    }
+    
     public int getPromedio(){
         return promedio;
     }
@@ -39,13 +46,6 @@ public class Nodo
         this.promedio = promedio;
     }
     
-    public int getCarnet(){
-        return carnet;
-    }
-    public void setCarnet(int carnet){
-        this.carnet = carnet;
-    }
-
     public Nodo getSiguiente(){
         return siguiente;
     }
