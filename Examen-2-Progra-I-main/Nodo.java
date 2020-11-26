@@ -55,7 +55,7 @@ public class Nodo
     }
     
     
-    /**
+    
     
     Nodo hijoIzquierdo;
     Nodo hijoDerecho;
@@ -86,6 +86,6 @@ public class Nodo
     {
         hijoDerecho = nuevoNodo;
     }
-    */
+    
 }
 

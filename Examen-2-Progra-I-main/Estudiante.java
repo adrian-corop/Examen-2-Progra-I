@@ -9,6 +9,15 @@ import java.util.Scanner;
 public class Estudiante
 {
     Scanner reader = new Scanner(System.in);
+    public Estudiante(){
+        
+    }
+
+    public Estudiante(String nombre, int carnet, int promedio){
+        this.nombre = nombre;
+        this.carnet = carnet;
+        this. promedio = promedio;
+    }
     String nombre;
     int notas;
     int promedio;
@@ -17,7 +26,7 @@ public class Estudiante
     public String solicitarNombre(){
         System.out.println("Ingrese el nombre del estudiante por favor");
         nombre = reader.nextLine();
-        
+
         return nombre;
     }
 
@@ -30,7 +39,7 @@ public class Estudiante
     int notasSumadas;
     public void solicitarNotas(){        
         System.out.println("Ingrese la nota del estudiante por favor");
-        
+
         int bandera; // Me permite saber si el usuario quiere ingrsar mas notas
         notas= reader.nextInt();
         notas = notasSumadas + notas;
@@ -38,13 +47,13 @@ public class Estudiante
         System.out.println("Desea ingresar mas notas?");
         System.out.println("1 = Si          0 = No");
         bandera = reader.nextInt();
-        
+
         if(bandera == 1){
             notasSumadas= notas;
             solicitarNotas();
         }else{
             if (bandera == 0){
-                
+
                 return;
             }else{
                 System.out.println("Esa opcion no esta disponible");
@@ -53,12 +62,15 @@ public class Estudiante
         }
 
     }    
-    
+
     public int calcularpromedio(){
         promedio = notas/indice;
         return promedio;
     }
     
-    
-}
+    @Override
+    public String toString(){        
+        return "Estudiante:" + nombre + "-" + carnet + "-Promedio:" + promedio;
+    }
 
+}

@@ -2,7 +2,8 @@
 comment0.target=Grupo
 comment1.params=nombre\ carnet\ promedio
 comment1.target=void\ insertarAlfabeticamente(java.lang.String,\ int,\ int)
-comment2.params=
-comment2.target=void\ imprimirLista()
-comment2.text=\r\n\ \ \ \ Arbol\ metodosArbol\ \=\ new\ Arbol();\r\n\r\n\ \ \ \ public\ void\ insertarPromedios(int\ promedio){\r\n\r\n\ \ \ \ \ \ \ \ metodosArbol.agregarHijo(promedio);\r\n\r\n\ \ \ \ }\r\n
-numComments=3
+comment2.params=promedio
+comment2.target=void\ insertarPromedios(int)
+comment3.params=
+comment3.target=void\ imprimirLista()
+numComments=4

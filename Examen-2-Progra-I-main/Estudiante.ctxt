@@ -1,11 +1,17 @@
 #BlueJ class context
 comment0.target=Estudiante
 comment1.params=
-comment1.target=java.lang.String\ solicitarNombre()
-comment2.params=
-comment2.target=int\ solicitarCarnet()
+comment1.target=Estudiante()
+comment2.params=nombre\ carnet\ promedio
+comment2.target=Estudiante(java.lang.String,\ int,\ int)
 comment3.params=
-comment3.target=void\ solicitarNotas()
+comment3.target=java.lang.String\ solicitarNombre()
 comment4.params=
-comment4.target=int\ calcularpromedio()
-numComments=5
+comment4.target=int\ solicitarCarnet()
+comment5.params=
+comment5.target=void\ solicitarNotas()
+comment6.params=
+comment6.target=int\ calcularpromedio()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

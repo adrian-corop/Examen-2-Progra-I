@@ -8,8 +8,6 @@
 import java.util.Scanner;
 public class Grupo
 {   
-   
-    Estudiante estudiante = new Estudiante();
     MetodosLista metodosLista = new MetodosLista();
 
     public void insertarAlfabeticamente(String nombre, int carnet, int promedio){   
@@ -20,7 +18,7 @@ public class Grupo
             metodosLista.insertarEnPosicion(nombre , carnet, promedio, posicion);
         }
     }
-    /**
+    
     Arbol metodosArbol = new Arbol();
 
     public void insertarPromedios(int promedio){
@@ -28,7 +26,7 @@ public class Grupo
         metodosArbol.agregarHijo(promedio);
 
     }
-    */
+    
    
     public void imprimirLista(){
     metodosLista.imprimirLista();

@@ -8,7 +8,7 @@
 import java.util.Scanner;
 public class Controlador
 {
-    
+
     public static void menu(){
         Scanner reader = new Scanner(System.in);
 
@@ -31,7 +31,7 @@ public class Controlador
             switch (opcion){
                 case 1:
                 anadirEstudiantes();
-                
+
                 break;
                 case 2:
 
@@ -60,26 +60,22 @@ public class Controlador
         Scanner reader = new Scanner(System.in);
         Grupo grupo = new Grupo();
         Estudiante estudiante = new Estudiante();
-        //Arbol arbol = new Arbol();
-        
+
         String nombre = estudiante.solicitarNombre();
         int carnet= estudiante.solicitarCarnet();
         estudiante.solicitarNotas();         
         int promedio = estudiante.calcularpromedio();
-        
-        //grupo.insertarPromedios(promedio);
-        //arbol.recorrerEnOrden(arbol.getRaiz());
-        
+
+
         grupo.insertarAlfabeticamente(nombre,carnet, promedio);      
         grupo.imprimirLista();
-        
-        
+        //System.out.println(estudiante);
         
         int bandera;           
         System.out.println("Desea anadir otro estudiante?   1 = Si  2 = No");
         bandera = reader.nextInt();        
         if(bandera == 1){
-            
+
             anadirEstudiantes();            
         }else{
             if (bandera == 0){                
@@ -90,5 +86,14 @@ public class Controlador
             }
         }
     }
-    
+
+    public void crearArbol(){
+        Estudiante estudiante = new Estudiante();
+        Arbol arbol = new Arbol();
+        Grupo grupo = new Grupo();
+        int promedio = estudiante.calcularpromedio();
+        grupo.insertarPromedios(promedio);
+        arbol.recorrerEnOrden(arbol.getRaiz());
+    }
+
 }

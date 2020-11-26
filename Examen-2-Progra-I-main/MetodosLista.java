@@ -101,15 +101,21 @@ public class MetodosLista
         }
     }
 
-    public void imprimirLista(){
+    public void imprimirLista(){      
         if (!estaVacia()){
             Nodo aux = inicio;
-            
+            String  nombre = aux.getNombre();;
+            int carnet = aux.getCarnet();
+            int promedio = aux.getPromedio();
+            Estudiante estudiante = new Estudiante(nombre, carnet, promedio);
+
             while(aux != null){
-                System.out.println("Estudiante: " + aux.getNombre()+"-" + aux.getCarnet() + "    Promedio:" + aux.getPromedio());
-                 
+
+                System.out.println(estudiante);
+
                 aux = aux.getSiguiente();
             }
-        }
+        }        
     }
+
 }
